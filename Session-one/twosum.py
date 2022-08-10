@@ -36,19 +36,19 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 """
 
 # solution one (Prinecton, Mahmoud):
-    def twoSumOne(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if nums[i] + nums[j] == target and i != j:
-                    return [i, j]
+def twoSumOne(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target and i != j:
+                return [i, j]
 
 # solution two (Nathan):
-def twoSumTwo(self, nums, target):
+def twoSumTwo(nums, target):
     d = {}
     for i, num in enumerate(nums):
         if target - num in d:
@@ -57,23 +57,23 @@ def twoSumTwo(self, nums, target):
 
 
 # solution three ( zenret ):
-    def twoSumThree(self, nums, target):
-        indexs = set()
-        for i, num in enumerate(nums):
-            diff = target - num
+def twoSumThree(nums, target):
+    indexs = set()
+    for i, num in enumerate(nums):
+        diff = target - num
 
-            if diff in nums:
-                idx1 = i
-                idx2 = nums.index(diff)
-                print(idx1)
-                print(idx2)
-                if idx1 != idx2:
-                    indexs.add(idx1)
-                    indexs.add(nums.index(diff))
+        if diff in nums:
+            idx1 = i
+            idx2 = nums.index(diff)
+            print(idx1)
+            print(idx2)
+            if idx1 != idx2:
+                indexs.add(idx1)
+                indexs.add(nums.index(diff))
 
         #if (len(indexs) > 2) or (len(indexs)<=1):
             #print("No solutions found")
         #else:
         #print(indexs)
             
-        return indexs
+    return indexs
