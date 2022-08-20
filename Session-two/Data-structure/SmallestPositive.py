@@ -11,12 +11,17 @@ print(smallest_positive([.2, 5, 3, -.1, 7, 7, 6]))
 ######################################################
 # Solution One:
 ###############
-def smallest_positive_a(list):
-   curr_smallest = list[0]
-   for i in list:
-       if i < curr_smallest:
+def smallest_positive_a(lista):
+    if(len(lista) == 0) return -1
+
+    curr_smallest = list[0]     #curr_smallest = -1
+    for i in lista:
+        if i < curr_smallest:   #there will be no positive value that is smaller that curr_smallest
             curr_smallest = i
-   return curr_smallest
+    return curr_smallest
+
+# if list is empty, it'll break
+print(smallest_positive_a([-1,0,1,3,4,56,4]))
 
 ######################################################
 # Solution Two:
