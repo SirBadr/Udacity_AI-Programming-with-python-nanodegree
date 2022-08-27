@@ -4,7 +4,7 @@ print("text before")
 print(f.read())
 
 f = open("write.txt", "a")
-f.write("Woops! I have appended to the content!")
+f.write("my appended text")
 f.close()
 
 #open and read the file after the appending:

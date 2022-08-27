@@ -1,8 +1,11 @@
-from summationFile import summation
+from summationFile import summationOfTwoIntegers as sm
+
 import sys
 sys.path.insert(0, '../')
-from sandbox2 import tfunction as tff
+from sandbox2 import tfunction as tfnc
+
+#from sandbox2 import tfunction as tff
 
 
-print(tff(2))
-print(summation(2,3))
+print(tfnc(2))
+#print(sm(2,3))
